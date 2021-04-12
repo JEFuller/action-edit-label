@@ -1,8 +1,8 @@
 {
-  "name": "action-add-labels",
+  "name": "action-edit-label",
   "version": "1.1.0",
   "private": true,
-  "description": "Add labels to an issue or a pull request",
+  "description": "Edit a label",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc && ncc build",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions-ecosystem/action-add-labels.git"
+    "url": "git+https://github.com/actions-ecosystem/action-edit-label.git"
   },
   "keywords": [
     "actions",
     "github",
-    "labels"
+    "label"
   ],
   "author": "The Actions Ecosystem Authors",
   "license": "Apache 2.0",

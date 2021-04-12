@@ -1,20 +1,26 @@
-name: Actions Ecosystem Add Labels
-description: Add labels to an issue or a pull request.
+name: Actions Ecosystem Edit Label
+description: Edit issue label.
 author: The Actions Ecosystem Authors
 inputs:
+  repo:
+    description: GitHub repository
+    required: true
+    default: ${{ github.event.repository.full_name }}
   github_token:
     description: A GitHub token.
     required: false
     default: ${{ github.token }}
-  labels:
-    description: The labels' name to be added. Must be separated with line breaks if there're multiple labels.
+  name:
+    description: The label name to be edited.
     required: true
-  repo:
-    description: The owner and repository name. e.g.) Codertocat/Hello-World
+  new_name:
+    description: The new name of the label. Emoji can be added to label names, using either native emoji or colon-style markup
     required: false
-    default: ${{ github.repository }}
-  number:
-    description: The number of the issue or pull request.
+  color:
+    description: The hexadecimal color code for the label, without the leading \#.
+    required: false
+  description:
+    description: The new name of the label. Emoji can be added to label names, using either native emoji or colon-style markup.
     required: false
 runs:
   using: node12
